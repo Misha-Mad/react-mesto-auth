@@ -6,6 +6,10 @@ export const configApi = {
   }
 }
 
+export const configAuthApi = {
+	baseUrl: 'https://auth.nomoreparties.co'
+}
+
 export const formValidationOptions = {
 	formElement: '.popup__container',
 	inputElement: '.popup__input',

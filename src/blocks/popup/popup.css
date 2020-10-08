@@ -11,9 +11,13 @@
 @import url(./__input-error/popup__input-error.css);
 @import url(./__input-error/_active/popup__input-error_active.css);
 @import url(./__save/_inactive/popup__save_inactive.css);
-@import url(__container/_size/popup__container_size_delete.css);
-@import url(./__container/_size/popup__container_size_avatar.css);
+@import url(__container/_type/popup__container_type_delete.css);
+@import url(./__container/_type/popup__container_type_avatar.css);
 @import url(./__title/_position/popup__title_position.css);
+@import url(./__info/popup__info.css);
+@import url(./__container/_type/popup__container_type_info.css);
+@import url(./__title/_tooltip/popup__title_tooltip.css);
+@import url(./__info/_access/popup__info_access.css);
 
 
 .popup {
