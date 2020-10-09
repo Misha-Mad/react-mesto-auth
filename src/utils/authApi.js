@@ -18,13 +18,15 @@ class AuthApi {
 				email: email
 			})
 		})
-			.then((response,) => {
-				return response.json();
+			.then((res) => {
+				if (res.ok) {
+					return res.json();
+				}
+				return Promise.reject(`Ошибка: ${res.status}`);
 			})
 			.then((res) => {
 				return res;
 			})
-			.catch((err) => console.log(err));
 	};
 
 	authorize(password, email) {
@@ -50,7 +52,6 @@ class AuthApi {
 					return data;
 				}
 			})
-			.catch((err) => console.log(err));
 	}
 
 	getContent() {
@@ -61,8 +62,12 @@ class AuthApi {
 				"Authorization": `Bearer ${localStorage.getItem('token')}`
 			}
 		})
-			.then(res => res.json())
-			.then(data => data)
+			.then(res => {
+				if (res.ok) {
+					return res.json();
+				}
+				return Promise.reject(`Ошибка: ${res.status}`);
+			})
 	}
 
 }

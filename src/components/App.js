@@ -42,6 +42,9 @@ function App() {
 				setCurrentUser(currentUser);
 				setCards(cards);
 			})
+			.catch((err) => {
+				console.log(err);
+			})
 	}, []);
 
 	React.useEffect(() => {
@@ -73,14 +76,14 @@ function App() {
 		}
 	})
 
-	function handleAuthorization() {
-		authApi.authorize(userData.password, userData.email)
+	function handleAuthorization( email, password) {
+		authApi.authorize(password, email)
 			.then((res) => {
 				if (res) {
 					setUserData({});
 					handleLogin();
 					setUserData({
-						email: userData.email
+						email: email
 					})
 					history.push('/');
 				} else {
@@ -94,9 +97,8 @@ function App() {
 			)
 	}
 
-	function handleRegistration() {
-		console.log(userData)
-		authApi.register(userData.password, userData.email)
+	function handleRegistration( email, password) {
+		authApi.register(password, email)
 			.then((res) => {
 				if (res.data) {
 					setTooltipMessage('Вы успешно зарегистрировались!');
@@ -225,12 +227,11 @@ function App() {
 			})
 	}
 
-	function handleChangeInput(e) {
-		const {name, value} = e.target;
-		setUserData({
-			...userData,
-			[name]: value
-		});
+	function signOut() {
+		localStorage.removeItem('token');
+		setloggedIn(false);
+		setUserData({});
+		history.push('/sign-in');
 	}
 
 	return (
@@ -239,7 +240,7 @@ function App() {
 			<div className="root">
 
 
-				<Header loggedIn={loggedIn} setloggedIn={setloggedIn} userData={userData} onUserData={setUserData}/>
+				<Header loggedIn={loggedIn} userData={userData} onSignOut={signOut}/>
 				<Switch>
 					<ProtectedRoute exact path="/"
 													loggedIn={loggedIn}
@@ -253,10 +254,10 @@ function App() {
 													onCardDelete={handleDeleteClick}
 					/>
 					<Route path="/sign-up">
-						<Register onRegistration={handleRegistration} handleChange={handleChangeInput} userData={userData}/>
+						<Register onRegistration={handleRegistration} />
 					</Route>
 					<Route path="/sign-in">
-						<Login onLogin={handleAuthorization} handleChange={handleChangeInput} userData={userData}/>
+						<Login onLogin={handleAuthorization} />
 					</Route>
 					<Route path="/">
 						{loggedIn ? <Redirect to="/"/> : <Redirect to="/sign-in"/>}

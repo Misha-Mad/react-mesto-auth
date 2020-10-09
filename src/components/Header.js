@@ -1,22 +1,16 @@
 import React from 'react';
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-function Header({ loggedIn, setloggedIn, userData, onUserData }) {
+function Header({ loggedIn, userData, onSignOut }) {
 
 	const location = useLocation();
-	const history = useHistory();
-	function signOut() {
-		localStorage.removeItem('token');
-		setloggedIn(false)
-		onUserData({});
-		history.push('/sign-in');
-	}
+
 	return (
 			<header className="header">
 				{loggedIn ?
 					<>
 						<p className="header__email">{userData.email}</p>
-						<button className="header__button" onClick={signOut}>Выход</button>
+						<button className="header__button" onClick={onSignOut}>Выход</button>
 					</> :
 					location.pathname === '/sign-in' ?
 						<Link to="/sign-up"  className="header__link" >Регистрация</Link> :

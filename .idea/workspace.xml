@@ -20,40 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="675981a4-c83a-4b0a-915e-43fba692f069" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/blocks/entrence/__button/entrence__button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/entrence/__form/entrence__form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/entrence/__input/entrence__input.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/entrence/__link/entrence__link.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/entrence/__question/entrence__question.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/entrence/__title/entrence__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/entrence/entrence.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/header/__button/header__button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/header/__email/header__email.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/header/__link/header__link.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__container/_type/popup__container_type_info.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__info/_access/popup__info_access.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__info/popup__info.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__title/_tooltip/popup__title_tooltip.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/InfoTooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProtectefRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Error.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Success.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/authApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/content/content.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/content/content.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__container/_size/popup__container_size_avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__container/_type/popup__container_type_avatar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__container/_size/popup__container_size_delete.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__container/_type/popup__container_type_delete.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/popup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/authApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/authApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +118,8 @@
       <workItem from="1601913685283" duration="976000" />
       <workItem from="1601915468579" duration="3375000" />
       <workItem from="1602000028383" duration="20909000" />
-      <workItem from="1602125030013" duration="8250000" />
+      <workItem from="1602125030013" duration="8502000" />
+      <workItem from="1602261526621" duration="1731000" />
     </task>
     <servers />
   </component>
