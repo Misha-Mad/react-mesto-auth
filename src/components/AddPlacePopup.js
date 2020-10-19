@@ -30,7 +30,7 @@ function AddPlacePopup({isOpen, onClose, onAddPlace, isLoading}) {
 							 type="text"
 							 placeholder="Название"
 							 required
-							 minLength="1"
+							 minLength="2"
 							 maxLength="30"
 							 onChange={handleChange}
 							 value={values.nameplace || ''}/>

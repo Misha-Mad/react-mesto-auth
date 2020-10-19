@@ -1,13 +1,10 @@
 
 export const configApi = {
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-13',
-  headers: {
-    authorization: '9dea6e73-f3e0-418c-86b9-2dc543c21d39'
-  }
+  baseUrl: 'https://api.zakharov.students.nomoreparties.co',
 }
 
 export const configAuthApi = {
-	baseUrl: 'https://auth.nomoreparties.co'
+	baseUrl: 'https://api.zakharov.students.nomoreparties.co',
 }
 
 export const formValidationOptions = {

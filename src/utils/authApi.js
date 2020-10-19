@@ -46,20 +46,20 @@ class AuthApi {
 				}
 				return Promise.reject(`Ошибка: ${res.status}`);
 			})
-			.then((data) => {
-				if (data) {
-					localStorage.setItem('token', data.token);
-					return data;
+			.then(({ token }) => {
+				if (token) {
+					localStorage.setItem('token', token);
+					return token;
 				}
 			})
 	}
 
-	getContent() {
+	getContent(jwt) {
 		return fetch(`${this._baseUrl}/users/me`, {
 			method: 'GET',
 			headers: {
 				"Content-Type": "application/json",
-				"Authorization": `Bearer ${localStorage.getItem('token')}`
+				"Authorization": `Bearer ${jwt}`
 			}
 		})
 			.then(res => {

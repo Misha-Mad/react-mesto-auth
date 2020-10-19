@@ -14,7 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && scp -r F:\\учеба\\dev\\react-mesto-auth\\build\\* praktikum@130.193.44.139:/home/praktikum/react-mesto-static"
   },
   "eslintConfig": {
     "extends": "react-app"

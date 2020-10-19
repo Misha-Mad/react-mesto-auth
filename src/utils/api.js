@@ -22,7 +22,9 @@ class Api {
 
 	getInfo() {
 		return fetch(`${this._baseUrl}/users/me`, {
-			headers: this._headers
+			headers: {
+				authorization: `Bearer ${localStorage.getItem('token')}`
+			}
 		})
 			.then(this._handleResponse)
 			.catch(this._handleResponseError);
@@ -30,7 +32,9 @@ class Api {
 
 	getInitialCards() {
 		return fetch(`${this._baseUrl}/cards`, {
-			headers: this._headers
+			headers: {
+				authorization: `Bearer ${localStorage.getItem('token')}`
+			}
 		})
 			.then(this._handleResponse)
 			.catch(this._handleResponseError);
@@ -40,7 +44,7 @@ class Api {
 		return fetch(`${this._baseUrl}/users/me`, {
 			method: 'PATCH',
 			headers: {
-				authorization: this._headers.authorization,
+				authorization: `Bearer ${localStorage.getItem('token')}`,
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(inputObject)
@@ -53,7 +57,7 @@ class Api {
 		return fetch(`${this._baseUrl}/cards`, {
 			method: 'POST',
 			headers: {
-				authorization: this._headers.authorization,
+				authorization: `Bearer ${localStorage.getItem('token')}`,
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
@@ -68,7 +72,9 @@ class Api {
 	deleteCard(id) {
 		return fetch(`${this._baseUrl}/cards/${id}`, {
 			method: 'DELETE',
-			headers: this._headers
+			headers: {
+				authorization: `Bearer ${localStorage.getItem('token')}`
+			}
 		})
 			.then(this._handleResponse)
 			.catch(this._handleResponseError);
@@ -78,7 +84,9 @@ class Api {
 		if (isLiked) {
 			return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
 				method: 'DELETE',
-				headers: this._headers
+				headers: {
+					authorization: `Bearer ${localStorage.getItem('token')}`
+				}
 			})
 				.then(this._handleResponse)
 				.catch(this._handleResponseError);
@@ -86,7 +94,9 @@ class Api {
 		} else {
 			return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
 				method: 'PUT',
-				headers: this._headers
+				headers: {
+					authorization: `Bearer ${localStorage.getItem('token')}`
+				}
 			})
 				.then(this._handleResponse)
 				.catch(this._handleResponseError);
@@ -97,7 +107,7 @@ class Api {
 		return fetch(`${this._baseUrl}/users/me/avatar`, {
 			method: 'PATCH',
 			headers: {
-				authorization: this._headers.authorization,
+				authorization: `Bearer ${localStorage.getItem('token')}`,
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({

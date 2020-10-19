@@ -37,37 +37,16 @@ function App() {
 	const [tooltipMessage, setTooltipMessage] = React.useState('');
 
 	React.useEffect(() => {
-		Promise.all([api.getInfo(), api.getInitialCards()])
-			.then(([currentUser, cards]) => {
-				setCurrentUser(currentUser);
-				setCards(cards);
-			})
-			.catch((err) => {
-				console.log(err);
-			})
-	}, []);
-
-	React.useEffect(() => {
-		api.getInfo()
-			.then(currentUser => {
-				setCurrentUser(currentUser);
-			})
-	}, [isEditProfilePopupOpen])
-
-	React.useEffect(() => {
-
 		function handleEscClose(event) {
 			if (event.key === "Escape") {
 				closeAllPopups();
 			}
 		}
-
 		function closeByOverlay(event) {
 			if (event.target.classList.contains('popup_active')) {
 				closeAllPopups();
 			}
 		}
-
 		document.addEventListener('mousedown', closeByOverlay);
 		document.addEventListener('keydown', handleEscClose);
 		return () => {
@@ -78,39 +57,27 @@ function App() {
 
 	function handleAuthorization( email, password) {
 		authApi.authorize(password, email)
-			.then((res) => {
-				if (res) {
-					setUserData({});
-					handleLogin();
-					setUserData({
-						email: email
-					})
-					history.push('/');
-				} else {
-					setTooltipMessage('Такого пользователя не существует. Попробуйте снова.')
-					setInfoTooltip(true);
-				}
+			.then((jwt) => {
+				tokenCheck();
 			})
 			.catch((err) => {
-					console.log(err);
+				setTooltipMessage('Такого пользователя не существует. Попробуйте снова.')
+				setInfoTooltip(true);
 				}
 			)
 	}
 
 	function handleRegistration( email, password) {
 		authApi.register(password, email)
-			.then((res) => {
-				if (res.data) {
+			.then(() => {
 					setTooltipMessage('Вы успешно зарегистрировались!');
 					setInfoTooltip(true);
 					history.push("/sign-in");
-				} else {
-					setTooltipMessage('Что-то пошло не так! Попробуйте ещё раз.');
-					setInfoTooltip(true);
-				}
 			})
 			.catch((err) => {
-					console.log(err);
+				setTooltipMessage('Что-то пошло не так! Попробуйте ещё раз.');
+				setInfoTooltip(true);
+				console.log(err);
 				}
 			)
 	}
@@ -118,21 +85,23 @@ function App() {
 	const tokenCheck = useCallback(() => {
 		const jwt = localStorage.getItem('token');
 		if (jwt) {
-			authApi.getContent(jwt)
-				.then((res) => {
-					if (res) {
+			Promise.all([api.getInfo(), api.getInitialCards()])
+				.then(([currentUser, cards]) => {
+					setCurrentUser(currentUser);
+					setCards(cards);
+					setUserData({
+						email: currentUser.email
+					})
+				})
+				.then(() => {
 						setloggedIn(true);
-						setUserData({
-							email: res.data.email
-						})
 						history.push('/');
-					}
 				})
 				.catch((err) => {
-					setloggedIn(false);
-					history.push('/sign-in');
-					console.log(err);
-				});
+						setloggedIn(false);
+						history.push('/sign-in');
+						console.log(err);
+				})
 		}
 	}, [history])
 
@@ -141,10 +110,6 @@ function App() {
 		tokenCheck();
 	}, [tokenCheck])
 
-
-	function handleLogin(e) {
-		setloggedIn(true);
-	}
 
 	function handleCardClick(card) {
 		setSelectedCard(card);
@@ -198,7 +163,7 @@ function App() {
 	}
 
 	function handleCardLike(card) {
-		const isLiked = card.likes.some(i => i._id === currentUser._id);
+		const isLiked = card.likes.some(i => i === currentUser._id);
 		api.changeLikeCardStatus(card._id, isLiked)
 			.then((newCard) => {
 				const newCards = cards.map((c) => c._id === card._id ? newCard : c);
