@@ -46,7 +46,7 @@ function EditProfilePopup({isOpen, onClose, onUpdateUser, isLoading}) {
 							 type="text"
 							 required
 							 minLength="2"
-							 maxLength="200"
+							 maxLength="40"
 							 placeholder="Информация о пользователе"
 							 onChange={handleChange}
 							 value={values.about}

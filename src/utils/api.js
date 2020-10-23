@@ -82,7 +82,7 @@ class Api {
 
 	changeLikeCardStatus(cardId, isLiked) {
 		if (isLiked) {
-			return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+			return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
 				method: 'DELETE',
 				headers: {
 					authorization: `Bearer ${localStorage.getItem('token')}`
@@ -92,7 +92,7 @@ class Api {
 				.catch(this._handleResponseError);
 
 		} else {
-			return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+			return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
 				method: 'PUT',
 				headers: {
 					authorization: `Bearer ${localStorage.getItem('token')}`

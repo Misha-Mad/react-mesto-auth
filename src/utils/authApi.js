@@ -49,7 +49,6 @@ class AuthApi {
 			.then(({ token }) => {
 				if (token) {
 					localStorage.setItem('token', token);
-					return token;
 				}
 			})
 	}
