@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="675981a4-c83a-4b0a-915e-43fba692f069" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditProfilePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfilePopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/authApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/authApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +119,7 @@
       <workItem from="1602956004199" duration="60966000" />
       <workItem from="1603125750922" duration="21000" />
       <workItem from="1603125872765" duration="4294000" />
-      <workItem from="1603377116780" duration="8226000" />
+      <workItem from="1603377116780" duration="13267000" />
     </task>
     <servers />
   </component>
@@ -180,5 +178,9 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="516" y="334" key="run.anything.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1601819401785" />
+    <state x="534" y="326" width="672" height="678" key="search.everywhere.popup" timestamp="1603554828453">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="534" y="326" width="672" height="678" key="search.everywhere.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1603554828453" />
   </component>
 </project>
