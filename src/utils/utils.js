@@ -1,10 +1,10 @@
 
 export const configApi = {
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://api.zaharov.students.nomoreparties.co',
 }
 
 export const configAuthApi = {
-	baseUrl: 'http://localhost:3000',
+	baseUrl: 'https://api.zaharov.students.nomoreparties.co',
 }
 
 export const formValidationOptions = {

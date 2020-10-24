@@ -44,7 +44,9 @@ function AddPlacePopup({isOpen, onClose, onAddPlace, isLoading}) {
 							 placeholder="Ссылка на картинку"
 							 required
 							 onChange={handleChange}
-							 value={values.src || ''}/>
+							 value={values.src || ''}
+							 pattern="^(https?|chrome):\/\/[^\s$.?#].[^\s]*$"
+				/>
 				<span className={`popup__input-error popup__src-error ${!isValid && 'popup__input-error_active'}`}>
 					{errors.src || ''}
 				</span>
