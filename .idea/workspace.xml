@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="675981a4-c83a-4b0a-915e-43fba692f069" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddPlacePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddPlacePopup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +56,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-mesto-api-full" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -121,7 +119,14 @@
       <workItem from="1602956004199" duration="60966000" />
       <workItem from="1603125750922" duration="21000" />
       <workItem from="1603125872765" duration="4294000" />
-      <workItem from="1603377116780" duration="17767000" />
+      <workItem from="1603377116780" duration="18544000" />
+      <workItem from="1604659777022" duration="4800000" />
+      <workItem from="1604930253150" duration="5608000" />
+      <workItem from="1605018635455" duration="1844000" />
+      <workItem from="1605196071783" duration="6072000" />
+      <workItem from="1605426156940" duration="4877000" />
+      <workItem from="1605803759199" duration="24923000" />
+      <workItem from="1606294913287" duration="20715000" />
     </task>
     <servers />
   </component>
@@ -168,10 +173,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="590" y="450" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1597101542460" />
-    <state x="1375" y="543" key="FileChooserDialogImpl" timestamp="1603377127907">
+    <state x="1375" y="543" key="FileChooserDialogImpl" timestamp="1605426413712">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1375" y="543" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1603377127907" />
+    <state x="1375" y="543" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1605426413712" />
     <state x="361" y="348" key="SettingsEditor" timestamp="1598866300312">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>

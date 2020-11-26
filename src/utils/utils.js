@@ -1,10 +1,10 @@
 
 export const configApi = {
-  baseUrl: 'https://api.zaharov.students.nomoreparties.co',
+  baseUrl: 'https://a.mesto.students.nomoreparties.site/',
 }
 
 export const configAuthApi = {
-	baseUrl: 'https://api.zaharov.students.nomoreparties.co',
+	baseUrl: 'https://a.mesto.students.nomoreparties.site/',
 }
 
 export const formValidationOptions = {
